@@ -1,0 +1,11 @@
+<form method="post">
+    <?php
+    $arra=$this->albumTable;
+    ?>
+    <table align="center">
+    <tr><td>Album Name</td><td> <input type="text" name="a_name" value="<?php echo $arra->name_n;?>"/></td></tr>
+     <tr><td>Album Details</td><td> <input type="text" name="a_det" value="<?php echo $arra->details;?>"/></td></tr>
+      <tr><td><input type="submit" name="add" value="Edit"/></td></tr>
+       <tr><td><?php //echo $this->addTable; ?></td></tr>
+</table>
+</form>

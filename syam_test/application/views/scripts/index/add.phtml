@@ -1,0 +1,22 @@
+<form method="post">
+    <table align="center">
+    <tr><td>Album Name</td><td> <input type="text" name="a_name" value=""/></td></tr>
+     <tr><td>Album Details</td><td> <input type="text" name="a_det" value=""/></td></tr>
+     <tr><td colspan="2" align="center"><input type="submit" name="add" value="Add"/></td></tr>
+     <tr><td align="center" colspan="2"><?php echo $this->addTable; ?></td></tr>
+    
+</table>
+    <table border="1" align="center" width="80%">
+        <tr><td width="40%">Name</td><td width="30%">Details</td><td width="30%">Edit / Delete</td></tr>
+<?php
+//echo "Success";
+$arr=$this->albumTable;
+foreach( $arr as $abc)
+{
+    ?>
+     <tr><td><?php echo $abc->name_n;?></td><td><?php echo $abc->details;?></td><td><a href="/syam_test/public/index/edit?id=<?php echo $abc->album_id;?>">Edit </a> / <a href="/syam_test/public/index/delete?id=<?php echo $abc->album_id;?>">Delete </a></td></tr>
+<?php
+}
+?>
+</table>
+</form>
